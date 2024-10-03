@@ -96,4 +96,13 @@ public class QueryMethodsTest {
             System.out.println(product);
         }
     }
+
+    @Test
+    void findFirst2ByOrderByNameAscMethod() {
+        List<Product> products = productRepository.findFirst2ByOrderByNameAsc();
+        for (Product product : products) {
+            System.out.println(product);
+        }
+    }
+
 }

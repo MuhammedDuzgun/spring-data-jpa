@@ -21,4 +21,5 @@ public interface IProductRepository extends JpaRepository<Product, Long> {
     List<Product> findByPriceBetween(BigDecimal startPrice, BigDecimal endPrice);
     List<Product> findByDateCreatedBetween(LocalDateTime startDate, LocalDateTime endDate);
     List<Product> findByNameIn(List<String> names);
+    List<Product> findFirst2ByOrderByNameAsc();
 }
