@@ -63,4 +63,10 @@ public class QueryMethodsTest {
         System.out.println(product);
     }
 
+    @Test
+    void findByNameLikeMethod() {
+        List<Product> products = productRepository.findByNameLike("Product");
+        System.out.println(products);
+    }
+
 }
