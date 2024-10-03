@@ -105,4 +105,12 @@ public class QueryMethodsTest {
         }
     }
 
+    @Test
+    void findTop2ByOrderByPriceDesc() {
+        List<Product> products = productRepository.findTop2ByOrderByPriceDesc();
+        for (Product product : products) {
+            System.out.println(product);
+        }
+    }
+
 }
