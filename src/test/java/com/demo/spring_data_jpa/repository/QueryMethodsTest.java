@@ -69,4 +69,12 @@ public class QueryMethodsTest {
         System.out.println(products);
     }
 
+    @Test
+    void findByPriceBetweenMethod() {
+        List<Product> products = productRepository.findByPriceBetween(new BigDecimal(1500), new BigDecimal(3000));
+        for (Product product : products) {
+            System.out.println(product);
+        }
+    }
+
 }
