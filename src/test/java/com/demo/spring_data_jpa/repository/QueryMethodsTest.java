@@ -89,4 +89,11 @@ public class QueryMethodsTest {
         }
     }
 
+    @Test
+    void findByNameInMethod() {
+        List<Product> products = productRepository.findByNameIn(List.of("Product3", "Product2"));
+        for (Product product : products) {
+            System.out.println(product);
+        }
+    }
 }
